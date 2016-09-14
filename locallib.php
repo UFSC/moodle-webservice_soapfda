@@ -299,6 +299,8 @@ class webservice_soap_server extends webservice_zend_server {
                                 $paramanddefault .= '='.$keydesc->default; break;
                             case PARAM_INT:
                                 $paramanddefault .= '='.$keydesc->default; break;
+                            case PARAM_LONG;
+                                $paramanddefault .= '='.$keydesc->default; break;
                             case PARAM_FLOAT;
                                 $paramanddefault .= '='.$keydesc->default; break;
                             default:
@@ -375,6 +377,8 @@ class webservice_soap_server extends webservice_zend_server {
                 case PARAM_BOOL: // 0 or 1 only for now
                 case PARAM_INT:
                     $type = 'int'; break;
+                case PARAM_LONG:
+                    $type = 'long'; break;
                 case PARAM_FLOAT;
                     $type = 'double'; break;
                 default:
@@ -399,6 +403,8 @@ class webservice_soap_server extends webservice_zend_server {
                 case PARAM_BOOL: // 0 or 1 only for now
                 case PARAM_INT:
                     $type = 'int'; break;
+                case PARAM_LONG:
+                    $type = 'long'; break;
                 case PARAM_FLOAT;
                 $type = 'double'; break;
                 default:
@@ -472,6 +478,8 @@ class '.$classname.' {
                 case PARAM_BOOL: // 0 or 1 only for now
                 case PARAM_INT:
                     $type = 'int'; break;
+                case PARAM_LONG:
+                    $type = 'long'; break;
                 case PARAM_FLOAT;
                 $type = 'double'; break;
                 default:
